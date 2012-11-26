@@ -1,0 +1,254 @@
+{
+ "kind": "customsearch#search",
+ "url": {
+  "type": "application/json",
+  "template": "https://www.googleapis.com/customsearch/v1?q={searchTerms}&num={count?}&start={startIndex?}&lr={language?}&safe={safe?}&cx={cx?}&cref={cref?}&sort={sort?}&filter={filter?}&gl={gl?}&cr={cr?}&googlehost={googleHost?}&c2coff={disableCnTwTranslation?}&hq={hq?}&hl={hl?}&siteSearch={siteSearch?}&siteSearchFilter={siteSearchFilter?}&exactTerms={exactTerms?}&excludeTerms={excludeTerms?}&linkSite={linkSite?}&orTerms={orTerms?}&relatedSite={relatedSite?}&dateRestrict={dateRestrict?}&lowRange={lowRange?}&highRange={highRange?}&searchType={searchType}&fileType={fileType?}&rights={rights?}&imgSize={imgSize?}&imgType={imgType?}&imgColorType={imgColorType?}&imgDominantColor={imgDominantColor?}&alt=json"
+ },
+ "queries": {
+  "nextPage": [
+   {
+    "title": "Google Custom Search - Suppose MyClass is a class that defines a copy constructor and overloads the assignment operator. In which of the following cases will the copy constructor of MyClass be called?",
+    "totalResults": "787",
+    "searchTerms": "Suppose MyClass is a class that defines a copy constructor and overloads the assignment operator. In which of the following cases will the copy constructor of MyClass be called?",
+    "count": 10,
+    "startIndex": 11,
+    "inputEncoding": "utf8",
+    "outputEncoding": "utf8",
+    "safe": "off",
+    "cx": "011623744360334870808:plz5huqvq_e"
+   }
+  ],
+  "request": [
+   {
+    "title": "Google Custom Search - Suppose MyClass is a class that defines a copy constructor and overloads the assignment operator. In which of the following cases will the copy constructor of MyClass be called?",
+    "totalResults": "787",
+    "searchTerms": "Suppose MyClass is a class that defines a copy constructor and overloads the assignment operator. In which of the following cases will the copy constructor of MyClass be called?",
+    "count": 10,
+    "startIndex": 1,
+    "inputEncoding": "utf8",
+    "outputEncoding": "utf8",
+    "safe": "off",
+    "cx": "011623744360334870808:plz5huqvq_e"
+   }
+  ]
+ },
+ "context": {
+  "title": "CheaterLeaker"
+ },
+ "searchInformation": {
+  "searchTime": 0.291791,
+  "formattedSearchTime": "0.29",
+  "totalResults": "787",
+  "formattedTotalResults": "787"
+ },
+ "spelling": {
+  "correctedQuery": "Suppose My Class is a class that defines a copy constructor and overloads the assignment operator. In which of the following cases will the copy constructor of My Class be called?",
+  "htmlCorrectedQuery": "Suppose \u003cb\u003e\u003ci\u003eMy Class\u003c/i\u003e\u003c/b\u003e is a class that defines a copy constructor and overloads the assignment operator. In which of the following cases will the copy constructor of \u003cb\u003e\u003ci\u003eMy Class\u003c/i\u003e\u003c/b\u003e be called?"
+ },
+ "items": [
+  {
+   "kind": "customsearch#result",
+   "title": "Copy Constructors and Assignment Operators",
+   "htmlTitle": "\u003cb\u003eCopy Constructors\u003c/b\u003e and \u003cb\u003eAssignment Operators\u003c/b\u003e",
+   "link": "http://www.keithschwarz.com/cs106l/winter20072008/handouts/170_Copy_Constructor_Assignment_Operator.pdf",
+   "displayLink": "www.keithschwarz.com",
+   "snippet": "another class instance. For example, the following code will invoke the   assignment operator, not the copy constructor: MyClass one, two; two = one;. In   this case ...",
+   "htmlSnippet": "another \u003cb\u003eclass\u003c/b\u003e instance. For example, the \u003cb\u003efollowing\u003c/b\u003e code \u003cb\u003ewill\u003c/b\u003e invoke the \u003cbr\u003e  \u003cb\u003eassignment operator\u003c/b\u003e, not the \u003cb\u003ecopy constructor\u003c/b\u003e: \u003cb\u003eMyClass\u003c/b\u003e one, two; two = one;. In \u003cbr\u003e  this \u003cb\u003ecase\u003c/b\u003e \u003cb\u003e...\u003c/b\u003e",
+   "cacheId": "DME_8CyW-p0J",
+   "mime": "application/pdf",
+   "fileFormat": "PDF/Adobe Acrobat",
+   "formattedUrl": "www.keithschwarz.com/.../170_Copy_Constructor_Assignment_Operator.pdf",
+   "htmlFormattedUrl": "www.keithschwarz.com/.../170_\u003cb\u003eCopy\u003c/b\u003e_\u003cb\u003eConstructor\u003c/b\u003e_\u003cb\u003eAssignment\u003c/b\u003e_\u003cb\u003eOperator\u003c/b\u003e.pdf",
+   "pagemap": {
+    "metatags": [
+     {
+      "author": "Keith Schwarz",
+      "creator": "Writer",
+      "producer": "OpenOffice.org 2.0",
+      "creationdate": "D:20080224142938-08'00'"
+     }
+    ]
+   }
+  },
+  {
+   "kind": "customsearch#result",
+   "title": "c++ - Initializer lists and assignment overloading (operator =) - Stack ...",
+   "htmlTitle": "c++ - Initializer lists and \u003cb\u003eassignment overloading\u003c/b\u003e (\u003cb\u003eoperator\u003c/b\u003e =) - Stack \u003cb\u003e...\u003c/b\u003e",
+   "link": "http://stackoverflow.com/questions/9369529/initializer-lists-and-assignment-overloading-operator",
+   "displayLink": "stackoverflow.com",
+   "snippet": "Does the overloading of the assignment operator propagate to an initializer ... For   example, suppose a class: class MyClass { private: std::string m_myString; //std::  string ... In this case, yes, it's a copy constructor; in real code, however, you ...   However, when you get into user-defined types, it is not as simple ...",
+   "htmlSnippet": "\u003cb\u003eDoes\u003c/b\u003e the \u003cb\u003eoverloading\u003c/b\u003e of the \u003cb\u003eassignment operator\u003c/b\u003e propagate to an initializer \u003cb\u003e...\u003c/b\u003e For \u003cbr\u003e  example, \u003cb\u003esuppose\u003c/b\u003e a \u003cb\u003eclass\u003c/b\u003e: \u003cb\u003eclass MyClass\u003c/b\u003e { private: std::string m_myString; //std::\u003cbr\u003e  string \u003cb\u003e...\u003c/b\u003e In this \u003cb\u003ecase\u003c/b\u003e, yes, it&#39;s a \u003cb\u003ecopy constructor\u003c/b\u003e; in real code, however, you \u003cb\u003e...\u003c/b\u003e \u003cbr\u003e  However, when you get into user-\u003cb\u003edefined\u003c/b\u003e types, it is not as simple \u003cb\u003e...\u003c/b\u003e",
+   "cacheId": "Lpnan_OrDmwJ",
+   "formattedUrl": "stackoverflow.com/.../initializer-lists-and-assignment-overloading-operator",
+   "htmlFormattedUrl": "stackoverflow.com/.../initializer-lists-and-\u003cb\u003eassignment\u003c/b\u003e-\u003cb\u003eoverloading\u003c/b\u003e-\u003cb\u003eoperator\u003c/b\u003e",
+   "pagemap": {
+    "article": [
+     {
+      "image": "http://cdn.sstatic.net/stackoverflow/img/apple-touch-icon.png",
+      "name": "Initializer lists and assignment overloading (operator =)",
+      "description": "Does the overloading of the assignment operator propagate to an initializer list? For example, suppose a class: class MyClass { private: std::string m_myString; //std::string overloads operator..."
+     }
+    ],
+    "metatags": [
+     {
+      "relativepagescore": "122186"
+     }
+    ]
+   }
+  },
+  {
+   "kind": "customsearch#result",
+   "title": "Copy constructor confusion | DaniWeb",
+   "htmlTitle": "\u003cb\u003eCopy constructor\u003c/b\u003e confusion | DaniWeb",
+   "link": "http://www.daniweb.com/software-development/cpp/threads/425671/copy-constructor-confusion",
+   "displayLink": "www.daniweb.com",
+   "snippet": "The only problem I can possibly see with my bitmap class is the GetPixels   function which ... pointer is deleted, it can mess up my class when the constructor   is called. ... The general understanding in this case is that anytime a pointer is   delivered from ... Why do I need both the copy constructor and the assignment   operator?",
+   "htmlSnippet": "The only problem I \u003cb\u003ecan\u003c/b\u003e possibly see with my bitmap \u003cb\u003eclass\u003c/b\u003e is the GetPixels \u003cbr\u003e  function which \u003cb\u003e...\u003c/b\u003e pointer is deleted, it \u003cb\u003ecan\u003c/b\u003e mess up \u003cb\u003emy class\u003c/b\u003e when the constructor \u003cbr\u003e  is \u003cb\u003ecalled\u003c/b\u003e. \u003cb\u003e...\u003c/b\u003e The general understanding in this \u003cb\u003ecase\u003c/b\u003e is that anytime a pointer is \u003cbr\u003e  delivered from \u003cb\u003e...\u003c/b\u003e Why \u003cb\u003edo\u003c/b\u003e I need both the \u003cb\u003ecopy constructor\u003c/b\u003e and the \u003cb\u003eassignment\u003c/b\u003e \u003cbr\u003e  \u003cb\u003eoperator\u003c/b\u003e?",
+   "cacheId": "PQT6V9ChZd0J",
+   "formattedUrl": "www.daniweb.com/software.../cpp/.../copy-constructor-confusion",
+   "htmlFormattedUrl": "www.daniweb.com/software.../cpp/.../\u003cb\u003ecopy\u003c/b\u003e-\u003cb\u003econstructor\u003c/b\u003e-confusion",
+   "pagemap": {
+    "cse_image": [
+     {
+      "src": "http://static.daniweb.com/images/icon.png"
+     }
+    ],
+    "metatags": [
+     {
+      "og:site_name": "DaniWeb",
+      "og:image": "http://static.daniweb.com/images/icon.png",
+      "fb:admins": "509930074",
+      "og:title": "Copy constructor confusion",
+      "og:description": "Well I like to learn as much code as I can in a day and I just came across the copy constructor. I do not understand when I need to use it. Do I need to use it for every class I make? I came across it after getting the ...",
+      "og:type": "article",
+      "og:url": "http://www.daniweb.com/software-development/cpp/threads/425671/copy-constructor-confusion"
+     }
+    ],
+    "breadcrumb": [
+     {
+      "url": "Software Development",
+      "title": "Software Development"
+     },
+     {
+      "url": "C++",
+      "title": "C++"
+     }
+    ]
+   }
+  },
+  {
+   "kind": "customsearch#result",
+   "title": "Under what circumstances must I provide, assignment operator ...",
+   "htmlTitle": "Under what circumstances must I provide, \u003cb\u003eassignment operator\u003c/b\u003e \u003cb\u003e...\u003c/b\u003e",
+   "link": "http://stackoverflow.com/questions/2386231/under-what-circumstances-must-i-provide-assignment-operator-copy-constructor-a",
+   "displayLink": "stackoverflow.com",
+   "snippet": "The C++ STL classes (like vector, string) have their own copy ctor, ... In that case   you'll have to implement copy ctor, overloaded assignment operator and   destructor. ... Also not defining them can result in code bloat as the compiler will   ... class myClass { void doSomething(const bigDataContainer data); ...",
+   "htmlSnippet": "The C++ STL \u003cb\u003eclasses\u003c/b\u003e (like vector, string) have their own \u003cb\u003ecopy ctor\u003c/b\u003e, \u003cb\u003e...\u003c/b\u003e In that \u003cb\u003ecase\u003c/b\u003e \u003cbr\u003e  you&#39;ll have to implement \u003cb\u003ecopy ctor\u003c/b\u003e, overloaded \u003cb\u003eassignment operator\u003c/b\u003e and \u003cbr\u003e  destructor. \u003cb\u003e...\u003c/b\u003e Also not \u003cb\u003edefining\u003c/b\u003e them \u003cb\u003ecan\u003c/b\u003e result in code bloat as the compiler \u003cb\u003ewill\u003c/b\u003e \u003cbr\u003e  \u003cb\u003e...\u003c/b\u003e \u003cb\u003eclass myClass\u003c/b\u003e { void doSomething(const bigDataContainer data); \u003cb\u003e...\u003c/b\u003e",
+   "cacheId": "kJBbbjejUp0J",
+   "formattedUrl": "stackoverflow.com/.../under-what-circumstances-must-i-provide-assignment- operator-copy-constructor-a",
+   "htmlFormattedUrl": "stackoverflow.com/.../under-what-circumstances-must-i-provide-\u003cb\u003eassignment\u003c/b\u003e- \u003cb\u003eoperator\u003c/b\u003e-\u003cb\u003ecopy\u003c/b\u003e-\u003cb\u003econstructor\u003c/b\u003e-a",
+   "pagemap": {
+    "article": [
+     {
+      "image": "http://cdn.sstatic.net/stackoverflow/img/apple-touch-icon.png",
+      "name": "Under what circumstances must I provide, assignment operator, copy constructor and destructor for my C++ class?",
+      "description": "Say I've got a class where the sole constituent is something like a std::string or std::vector - do I need to provide copy constructors / destructors / assignment operator?"
+     }
+    ],
+    "metatags": [
+     {
+      "relativepagescore": "160376"
+     }
+    ]
+   }
+  },
+  {
+   "kind": "customsearch#result",
+   "title": "C++ Interview Resource Kiosk -- Basic C++ Interview Stuff",
+   "htmlTitle": "C++ Interview Resource Kiosk -- Basic C++ Interview Stuff",
+   "link": "http://cpp.strombergers.com/",
+   "displayLink": "cpp.strombergers.com",
+   "snippet": "This is supposed to keep your code generic, methinks, by encouraging you to   design ... This way you can extend the functionality of an existing class w/o   touching the ... the destructor virtual, the base class destructor is the only that will   be called. ... between when a copy constructor and an assignment operator are   invoked.",
+   "htmlSnippet": "This is \u003cb\u003esupposed\u003c/b\u003e to keep your code generic, methinks, by encouraging you to \u003cbr\u003e  design \u003cb\u003e...\u003c/b\u003e This way you \u003cb\u003ecan\u003c/b\u003e extend the functionality of an existing \u003cb\u003eclass\u003c/b\u003e w/o \u003cbr\u003e  touching the \u003cb\u003e...\u003c/b\u003e the destructor virtual, the base \u003cb\u003eclass\u003c/b\u003e destructor is the only that \u003cb\u003ewill\u003c/b\u003e \u003cbr\u003e  be \u003cb\u003ecalled\u003c/b\u003e. \u003cb\u003e...\u003c/b\u003e between when a \u003cb\u003ecopy constructor\u003c/b\u003e and an \u003cb\u003eassignment operator\u003c/b\u003e are \u003cbr\u003e  invoked.",
+   "cacheId": "NHCIggdRwUQJ",
+   "formattedUrl": "cpp.strombergers.com/",
+   "htmlFormattedUrl": "cpp.strombergers.com/"
+  },
+  {
+   "kind": "customsearch#result",
+   "title": "c++ - What is the copy-and-swap idiom? - Stack Overflow",
+   "htmlTitle": "c++ - What is the \u003cb\u003ecopy\u003c/b\u003e-and-swap idiom? - Stack Overflow",
+   "link": "http://stackoverflow.com/questions/3279543/what-is-the-copy-and-swap-idiom",
+   "displayLink": "stackoverflow.com",
+   "snippet": "While the goals and implementation of the copy-constructor and ... and we'd   ultimately be trying to define the assignment operator in ... Let's consider a   concrete case. ... one resource correctly, what if my class manages more than   one? ... While one could just as easily do the following (and indeed, many ...",
+   "htmlSnippet": "While the goals and implementation of the \u003cb\u003ecopy\u003c/b\u003e-\u003cb\u003econstructor\u003c/b\u003e and \u003cb\u003e...\u003c/b\u003e and we&#39;d \u003cbr\u003e  ultimately be trying to \u003cb\u003edefine\u003c/b\u003e the \u003cb\u003eassignment operator\u003c/b\u003e in \u003cb\u003e...\u003c/b\u003e Let&#39;s consider a \u003cbr\u003e  concrete \u003cb\u003ecase\u003c/b\u003e. \u003cb\u003e...\u003c/b\u003e one resource correctly, what if \u003cb\u003emy class\u003c/b\u003e manages more than \u003cbr\u003e  one? \u003cb\u003e...\u003c/b\u003e While one could just as easily \u003cb\u003edo\u003c/b\u003e the \u003cb\u003efollowing\u003c/b\u003e (and indeed, many \u003cb\u003e...\u003c/b\u003e",
+   "cacheId": "ecJgiwjri4wJ",
+   "formattedUrl": "stackoverflow.com/questions/.../what-is-the-copy-and-swap-idiom",
+   "htmlFormattedUrl": "stackoverflow.com/questions/.../what-is-the-\u003cb\u003ecopy\u003c/b\u003e-and-swap-idiom",
+   "pagemap": {
+    "article": [
+     {
+      "image": "http://cdn.sstatic.net/stackoverflow/img/apple-touch-icon.png",
+      "name": "What is the copy-and-swap idiom?",
+      "description": "What is this idiom and when should it be used? Which problems does it solve? Will the idiom change when C++0x is used? Although it's been mentioned in many places, we didn't have any singular..."
+     }
+    ],
+    "metatags": [
+     {
+      "relativepagescore": "588275"
+     }
+    ]
+   }
+  },
+  {
+   "kind": "customsearch#result",
+   "title": "C++ FQA Lite: Constructors",
+   "htmlTitle": "C++ FQA Lite: \u003cb\u003eConstructors\u003c/b\u003e",
+   "link": "http://yosefk.com/c++fqa/ctors.html",
+   "displayLink": "yosefk.com",
+   "snippet": "[10.3] Can one constructor of a class call another constructor of the same class to   ... [10.5] Which constructor gets called when I create an array of Fred objects? ... [  10.9] Does return-by-value mean extra copies and extra overhead? ... needed to   store an object of a class (this is the value substituted for sizeof(MyClass)) at ...",
+   "htmlSnippet": "[10.3] \u003cb\u003eCan\u003c/b\u003e one \u003cb\u003econstructor\u003c/b\u003e of a \u003cb\u003eclass\u003c/b\u003e call another \u003cb\u003econstructor\u003c/b\u003e of the same \u003cb\u003eclass\u003c/b\u003e to \u003cbr\u003e  \u003cb\u003e...\u003c/b\u003e [10.5] Which \u003cb\u003econstructor\u003c/b\u003e gets \u003cb\u003ecalled\u003c/b\u003e when I create an array of Fred objects? \u003cb\u003e...\u003c/b\u003e [\u003cbr\u003e  10.9] \u003cb\u003eDoes\u003c/b\u003e return-by-value mean extra \u003cb\u003ecopies\u003c/b\u003e and extra overhead? \u003cb\u003e...\u003c/b\u003e needed to \u003cbr\u003e  store an object of a \u003cb\u003eclass\u003c/b\u003e (this is the value substituted for sizeof(\u003cb\u003eMyClass\u003c/b\u003e)) at \u003cb\u003e...\u003c/b\u003e",
+   "cacheId": "IeEUNiBoFxEJ",
+   "formattedUrl": "yosefk.com/c++fqa/ctors.html",
+   "htmlFormattedUrl": "yosefk.com/c++fqa/ctors.html"
+  },
+  {
+   "kind": "customsearch#result",
+   "title": "Readonly class variables in C++ - C++ Forum",
+   "htmlTitle": "Readonly \u003cb\u003eclass\u003c/b\u003e variables in C++ - C++ Forum",
+   "link": "http://www.cplusplus.com/forum/articles/36872/",
+   "displayLink": "www.cplusplus.com",
+   "snippet": "Feb 22, 2011 ... class A { public : readonly int x; // x can not modify out of this class void f() { x ...   however, as object oriented programming is supposed to model data flow, not the   ... And the solution is: Writing a copy-constructor and Operator overloading for   assignment ... A copy constructor will not help with assignment.",
+   "htmlSnippet": "Feb 22, 2011 \u003cb\u003e...\u003c/b\u003e \u003cb\u003eclass\u003c/b\u003e A { public : readonly int x; // x \u003cb\u003ecan\u003c/b\u003e not modify out of this \u003cb\u003eclass\u003c/b\u003e void f() { x \u003cb\u003e...\u003c/b\u003e \u003cbr\u003e  however, as object oriented programming is \u003cb\u003esupposed\u003c/b\u003e to model data flow, not the \u003cbr\u003e  \u003cb\u003e...\u003c/b\u003e And the solution is: Writing a \u003cb\u003ecopy\u003c/b\u003e-\u003cb\u003econstructor\u003c/b\u003e and \u003cb\u003eOperator overloading\u003c/b\u003e for \u003cbr\u003e  \u003cb\u003eassignment\u003c/b\u003e \u003cb\u003e...\u003c/b\u003e A \u003cb\u003ecopy constructor will\u003c/b\u003e not help with \u003cb\u003eassignment\u003c/b\u003e.",
+   "cacheId": "ggGh34LlK9YJ",
+   "formattedUrl": "www.cplusplus.com/forum/articles/36872/",
+   "htmlFormattedUrl": "www.cplusplus.com/forum/articles/36872/"
+  },
+  {
+   "kind": "customsearch#result",
+   "title": "Chapter 13",
+   "htmlTitle": "Chapter 13",
+   "link": "http://academic.cengage.com/resource_uploads/downloads/0538798084_232367.doc",
+   "displayLink": "academic.cengage.com",
+   "snippet": "We can then the use the following formula to find the selling price: ... Suppose   that numOfPages denotes the number of pages to be faxed and ... Repeat the   following for each of the remaining students in class. 1. ... C++ is case sensitive.   ...... overload the assignment operator, and explicitly provide the copy constructor   by ...",
+   "htmlSnippet": "We \u003cb\u003ecan\u003c/b\u003e then the use the \u003cb\u003efollowing\u003c/b\u003e formula to find the selling price: \u003cb\u003e...\u003c/b\u003e \u003cb\u003eSuppose\u003c/b\u003e \u003cbr\u003e  that numOfPages denotes the number of pages to be faxed and \u003cb\u003e...\u003c/b\u003e Repeat the \u003cbr\u003e  \u003cb\u003efollowing\u003c/b\u003e for each of the remaining students in \u003cb\u003eclass\u003c/b\u003e. 1. \u003cb\u003e...\u003c/b\u003e C++ is \u003cb\u003ecase\u003c/b\u003e sensitive. \u003cbr\u003e  \u003cb\u003e......\u003c/b\u003e \u003cb\u003eoverload\u003c/b\u003e the \u003cb\u003eassignment operator\u003c/b\u003e, and explicitly provide the \u003cb\u003ecopy constructor\u003c/b\u003e \u003cbr\u003e  by \u003cb\u003e...\u003c/b\u003e",
+   "cacheId": "E_hjThnhqNsJ",
+   "mime": "application/msword",
+   "fileFormat": "Microsoft Word",
+   "formattedUrl": "academic.cengage.com/resource_uploads/.../0538798084_232367.doc",
+   "htmlFormattedUrl": "academic.cengage.com/resource_uploads/.../0538798084_232367.doc"
+  },
+  {
+   "kind": "customsearch#result",
+   "title": "C# String manipulation, string constructors, string assignment, and ...",
+   "htmlTitle": "C# String manipulation, string \u003cb\u003econstructors\u003c/b\u003e, string \u003cb\u003eassignment\u003c/b\u003e, and \u003cb\u003e...\u003c/b\u003e",
+   "link": "http://www.csharphelp.com/2007/09/c-string-manipulation-string-constructors-string-assignment-and-the-stringbuilder-class/",
+   "displayLink": "www.csharphelp.com",
+   "snippet": "In this tutorial we will explain thetypes and methods related to strings, so that you   can make ... an instance of the String class called str, then assigned the text   Bryan to it. ... Suppose you have a string defined like this: .... The next overloaded   string constructor we'll consider takes the following form: ..... public class MyClass   { } ...",
+   "htmlSnippet": "In this tutorial we \u003cb\u003ewill\u003c/b\u003e explain thetypes and methods related to strings, so that you \u003cbr\u003e  \u003cb\u003ecan\u003c/b\u003e make \u003cb\u003e...\u003c/b\u003e an instance of the String \u003cb\u003eclass called\u003c/b\u003e str, then \u003cb\u003eassigned\u003c/b\u003e the text \u003cbr\u003e  Bryan to it. \u003cb\u003e...\u003c/b\u003e \u003cb\u003eSuppose\u003c/b\u003e you have a string \u003cb\u003edefined\u003c/b\u003e like this: \u003cb\u003e....\u003c/b\u003e The next overloaded \u003cbr\u003e  string \u003cb\u003econstructor\u003c/b\u003e we&#39;\u003cb\u003ell\u003c/b\u003e consider takes the \u003cb\u003efollowing\u003c/b\u003e form: \u003cb\u003e.....\u003c/b\u003e public \u003cb\u003eclass MyClass\u003c/b\u003e \u003cbr\u003e  { } \u003cb\u003e...\u003c/b\u003e",
+   "cacheId": "XVWlvKnRLJQJ",
+   "formattedUrl": "www.csharphelp.com/.../c-string-manipulation-string-constructors-string- assignment-and-the-stringbuilder-class/",
+   "htmlFormattedUrl": "www.csharphelp.com/.../c-string-manipulation-string-\u003cb\u003econstructors\u003c/b\u003e-string- \u003cb\u003eassignment\u003c/b\u003e-and-the-stringbuilder-\u003cb\u003eclass\u003c/b\u003e/"
+  }
+ ]
+}

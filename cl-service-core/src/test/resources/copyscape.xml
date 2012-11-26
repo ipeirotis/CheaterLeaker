@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<response>
+	<querywords>29</querywords>
+	<count>2</count>
+	<result>
+		<index>1</index>
+		<url>http://social.msdn.microsoft.com/Forums/en-SG/vclanguage/thread/CF07074C-E88B-4A97-B690-3E0ABFD67388</url>
+		<title>C++ Quiz - Microsoft Home Page | Devices and Services</title>
+		<textsnippet>... Suppose MyClass is a class that defines a copy constructor and overloads the assignment operator. In which of the following cases will the copy constructor of MyClass be called? a. When an object of MyClass is passed by value to a function b.</textsnippet>
+		<htmlsnippet>&lt;font color=&quot;#777777&quot;&gt;... &lt;/font&gt;&lt;font color=&quot;#000000&quot;&gt;Suppose MyClass is a class that defines a copy constructor and overloads the assignment operator. In which of the following cases will the copy constructor of MyClass be called? &lt;/font&gt;&lt;font color=&quot;#777777&quot;&gt;a. When an object of MyClass is passed by value to a function b.&lt;/font&gt;</htmlsnippet>
+		<minwordsmatched>29</minwordsmatched>
+	</result>
+	<result>
+		<index>2</index>
+		<url>http://social.msdn.microsoft.com/forums/en-us/vclanguage/thread/CF07074C-E88B-4A97-B690-3E0ABFD67388</url>
+		<title>C++ Quiz - Microsoft Home Page | Devices and Services</title>
+		<textsnippet>... Suppose MyClass is a class that defines a copy constructor and overloads the assignment operator. In which of the following cases will the copy constructor of MyClass be called? a.</textsnippet>
+		<htmlsnippet>&lt;font color=&quot;#777777&quot;&gt;... &lt;/font&gt;&lt;font color=&quot;#000000&quot;&gt;Suppose MyClass is a class that defines a copy constructor and overloads the assignment operator. In which of the following cases will the copy constructor of MyClass be called? &lt;/font&gt;&lt;font color=&quot;#777777&quot;&gt;a.&lt;/font&gt;</htmlsnippet>
+		<minwordsmatched>29</minwordsmatched>
+	</result>
+</response>
