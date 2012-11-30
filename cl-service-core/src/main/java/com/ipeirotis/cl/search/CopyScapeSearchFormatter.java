@@ -26,14 +26,22 @@ public class CopyScapeSearchFormatter extends SearchFormatter {
 
 		Document doc = new SAXBuilder().build(new ByteArrayInputStream(IOUtils
 				.toByteArray(httpEntity.getContent())));
+		
+		String querywords = doc.getRootElement().getChildText("querywords");
 
 		for (Element e : doc.getRootElement().getChildren("result")) {
 			ObjectNode nextResultNode = objectMapper.createObjectNode();
+			ObjectNode metaNode = objectMapper.createObjectNode();
+			
+			metaNode.put("minwordsmatched", e.getChildText("minwordsmatched"));
+			metaNode.put("samplewords", querywords);
 
 			nextResultNode.put("index", e.getChildText("index"));
 			nextResultNode.put("url", e.getChildText("url"));
 			nextResultNode.put("title", e.getChildText("title"));
 			nextResultNode.put("snippet", e.getChildText("textsnippet"));
+			
+			nextResultNode.put("meta", metaNode);
 
 			resultsNode.add(nextResultNode);
 		}
