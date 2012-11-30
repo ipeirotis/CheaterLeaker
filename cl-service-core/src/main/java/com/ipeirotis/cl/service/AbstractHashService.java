@@ -13,24 +13,34 @@ public abstract class AbstractHashService<K extends Entity> {
 
 	@SuppressWarnings("unchecked")
 	public AbstractHashService() {
-		this.clazz = (Class<K>) ((ParameterizedType) getClass().getGenericSuperclass()).getActualTypeArguments()[0];
+		this.clazz = (Class<K>) ((ParameterizedType) getClass()
+				.getGenericSuperclass()).getActualTypeArguments()[0];
 	}
-	
+
 	@Autowired
 	DynamoDBMapper mapper;
 
 	public Iterable<K> scanAll() {
-		return mapper.scan(clazz, new DynamoDBScanExpression());
+		return scanAll(new DynamoDBScanExpression());
+	}
+
+	public Iterable<K> scanAll(DynamoDBScanExpression scanExpression) {
+		if (null == scanExpression) {
+			scanExpression = new DynamoDBScanExpression();
+			
+			scanExpression.withLimit(20);
+		}
+
+		return mapper.scan(clazz, scanExpression);
 	}
 
 	public K findByPrimaryKey(String id) {
 		return mapper.load(clazz, id);
 	}
-	
+
 	public void save(K... objects) {
 		mapper.batchSave((Object[]) objects);
 	}
-
 
 	public void delete(K... objsToDelete) {
 		mapper.batchDelete((Object[]) objsToDelete);

@@ -4,6 +4,7 @@ import static com.jayway.restassured.RestAssured.basePath;
 import static com.jayway.restassured.RestAssured.given;
 
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Rule;
 import org.junit.Test;
 
@@ -19,6 +20,7 @@ public class JobResourceTest {
 	}
 	
 	@Test
+	@Ignore
 	public void testGetJobs() throws Exception {
 		given().
 		expect().
@@ -28,6 +30,7 @@ public class JobResourceTest {
 	}
 	
 	@Test
+	@Ignore
 	public void testDeleteJobs() throws Exception {
 		given().//
 		expect().//

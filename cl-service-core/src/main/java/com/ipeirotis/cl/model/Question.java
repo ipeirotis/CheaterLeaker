@@ -9,7 +9,7 @@ import com.amazonaws.services.dynamodb.datamodeling.DynamoDBAttribute;
 import com.amazonaws.services.dynamodb.datamodeling.DynamoDBHashKey;
 import com.amazonaws.services.dynamodb.datamodeling.DynamoDBMarshalling;
 import com.amazonaws.services.dynamodb.datamodeling.DynamoDBTable;
-import com.amazonaws.services.dynamodb.datamodeling.JsonMarshaller;
+import com.ipeirotis.cl.model.marshal.JsonStringListMarshaller;
 
 @DynamoDBTable(tableName = "cl-question")
 public class Question extends Entity implements Comparable<Question> {
@@ -51,7 +51,7 @@ public class Question extends Entity implements Comparable<Question> {
 	List<String> answers = new ArrayList<String>();
 
 	@DynamoDBAttribute
-	@DynamoDBMarshalling(marshallerClass=AnswersJsonMarshaller.class)
+	@DynamoDBMarshalling(marshallerClass=JsonStringListMarshaller.class)
 	public List<String> getAnswers() {
 		return answers;
 	}
@@ -61,10 +61,6 @@ public class Question extends Entity implements Comparable<Question> {
 	}
 	
 	
-	public static class AnswersJsonMarshaller extends JsonMarshaller<List<String>> {
-	}
-
-
 	@Override
 	public int compareTo(Question o) {
 		if (null == o)

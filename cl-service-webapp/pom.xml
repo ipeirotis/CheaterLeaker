@@ -147,6 +147,7 @@
 	</dependencies>
 
 	<build>
+		<finalName>cl-service</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -179,30 +180,21 @@
 	<profiles>
 		<profile>
 			<id>deploy</id>
-			<properties>
-				<maven.build.timestamp.format>yyyyMMddHHmmss</maven.build.timestamp.format>
-				<beanstalk.versionLabel>${maven.build.timestamp}</beanstalk.versionLabel>
-			</properties>
 			<build>
-				<finalName>ipeirotis-cl-service</finalName>
 				<plugins>
 					<plugin>
 						<groupId>br.com.ingenieux</groupId>
 						<artifactId>beanstalk-maven-plugin</artifactId>
 						<configuration>
-							<applicationName>ipeirotis-cl-service</applicationName>
-							<cnamePrefix>ipeirotis-cl-service</cnamePrefix>
-							<s3Bucket>ingenieux-beanstalk-apps</s3Bucket>
-							<s3Key>${project.artifactId}/${project.build.finalName}-${maven.build.timestamp}.war</s3Key>
+							<applicationName>cl-service</applicationName>
+							<cnamePrefix>cl-service</cnamePrefix>
 						</configuration>
 						<executions>
 							<execution>
 								<id>verify</id>
 								<phase>verify</phase>
 								<goals>
-									<goal>upload-source-bundle</goal>
-									<goal>create-application-version</goal>
-									<goal>update-environment</goal>
+									<goal>fast-deploy</goal>
 								</goals>
 							</execution>
 						</executions>

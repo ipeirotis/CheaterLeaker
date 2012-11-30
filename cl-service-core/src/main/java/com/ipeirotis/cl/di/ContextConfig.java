@@ -1,6 +1,7 @@
 package com.ipeirotis.cl.di;
 
 import org.codehaus.jackson.map.ObjectMapper;
+import org.codehaus.jackson.map.SerializationConfig;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -47,9 +48,11 @@ public class ContextConfig {
 
 	@Bean
 	public ObjectMapper getObjectMapper() {
-		ObjectMapper result = new ObjectMapper();
+		ObjectMapper mapper = new ObjectMapper();
 
-		return result;
+		mapper.configure(SerializationConfig.Feature.INDENT_OUTPUT, true);
+
+		return mapper;
 	}
 
 }
