@@ -15,9 +15,11 @@ import com.amazonaws.services.elasticmapreduce.AmazonElasticMapReduce;
 import com.amazonaws.services.elasticmapreduce.AmazonElasticMapReduceClient;
 import com.amazonaws.services.s3.AmazonS3;
 import com.amazonaws.services.s3.AmazonS3Client;
+import com.amazonaws.services.simpleworkflow.AmazonSimpleWorkflow;
+import com.amazonaws.services.simpleworkflow.AmazonSimpleWorkflowClient;
 
 @Configuration
-@ComponentScan(basePackages = "com.ipeirotis")
+@ComponentScan(basePackages = "com.ipeirotis.cl")
 public class ContextConfig {
 	@Bean
 	public AWSCredentials getAWSCredentials() throws Exception {
@@ -54,5 +56,9 @@ public class ContextConfig {
 
 		return mapper;
 	}
-
+	
+	@Bean
+	public AmazonSimpleWorkflow getSimpleWorkflow(AWSCredentials awsCredentials) {
+		return new AmazonSimpleWorkflowClient(awsCredentials);
+	}
 }

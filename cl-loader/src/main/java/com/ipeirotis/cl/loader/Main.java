@@ -7,6 +7,8 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
+import java.util.Set;
+import java.util.TreeSet;
 
 import javax.inject.Inject;
 
@@ -64,6 +66,8 @@ public class Main {
 	public void executeOn(String a) throws Exception {
 		FileObject rootZipObject = fsManager.resolveFile("zip:file:///" + a);
 		String testTopic = new File(a).getName().replaceAll("\\.zip$", "");
+		
+		Set<Question> questionSet = new TreeSet<Question>();
 
 		for (FileObject o : rootZipObject.findFiles(new FileTypeSelector(
 				FileType.FILE))) {
@@ -77,14 +81,13 @@ public class Main {
 			Document doc = new SAXBuilder().build(new ByteArrayInputStream(
 					contents.getBytes()));
 
-			Collection<Question> questions = parseDoc(testTopic, doc);
-			
-			System.err.println("Saving " + questions.size() + " for testTopic " + testTopic);
-
-			questionService.save(questions.toArray(new Question[questions.size()]));
-
-			return;
+			questionSet.addAll(parseDoc(testTopic, doc));
 		}
+		
+		System.err.println("Saving " + questionSet.size() + " for testTopic " + testTopic);
+		
+		questionService.save(questionSet.toArray(new Question[questionSet.size()]));
+
 	}
 
 	private Collection<Question> parseDoc(String testTopic, Document doc) {

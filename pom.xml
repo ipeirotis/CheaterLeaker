@@ -13,8 +13,9 @@
 
 	<modules>
 		<module>cl-service-core</module>
-		<module>cl-service-webapp</module>
 		<module>cl-loader</module>
+		<module>cl-service-runner</module>
+		<module>cl-service-webapp</module>
 	</modules>
 
 	<build>

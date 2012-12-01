@@ -11,7 +11,7 @@
 
 	<context-param>
 		<param-name>contextConfigLocation</param-name>
-		<param-value>com.ipeirotis.cl,org.codehaus.jackson.jaxrs</param-value>
+		<param-value>com.ipeirotis.cl.di.ContextConfig,com.ipeirotis.cl.runner.di.WorkflowContextConfig</param-value>
 	</context-param>
 
 	<listener>
@@ -32,7 +32,7 @@
 		</init-param>
 		<init-param>
 			<param-name>com.sun.jersey.config.property.packages</param-name>
-			<param-value>org.codehaus.jackson.jaxrs</param-value>
+			<param-value>com.ipeirotis.cl.web.v1,org.codehaus.jackson.jaxrs</param-value>
 		</init-param>
 		<load-on-startup>1</load-on-startup>
 	</servlet>
