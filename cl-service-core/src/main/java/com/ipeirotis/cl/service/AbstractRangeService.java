@@ -3,6 +3,7 @@ package com.ipeirotis.cl.service;
 import java.lang.reflect.ParameterizedType;
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -62,7 +63,12 @@ public abstract class AbstractRangeService<K extends Entity> {
 		
 		recordsToLookup.put(clazz, keyPairList);
 
-		for (List<?> x : mapper.batchLoad(recordsToLookup).values()) {
+		Map<String, List<Object>> batchLoadResult = mapper.batchLoad(recordsToLookup);
+		
+		if (null == batchLoadResult)
+			return Collections.emptyList();
+		
+		for (List<?> x : batchLoadResult.values()) {
 			result.addAll((Collection<? extends K>) x);
 		}
 		

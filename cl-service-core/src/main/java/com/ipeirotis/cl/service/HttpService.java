@@ -22,8 +22,6 @@ import com.ipeirotis.cl.search.GoogleSearchFormatter;
 
 @Component
 public class HttpService {
-	DefaultHttpClient httpClient = new DefaultHttpClient();
-
 	@Autowired
 	GoogleSearchFormatter googleSearchFormatter;
 
@@ -47,6 +45,8 @@ public class HttpService {
 
 	private ObjectNode doCopyScapeQuery(SearchQuery searchQuery)
 			throws Exception {
+		DefaultHttpClient httpClient = new DefaultHttpClient();
+
 		HttpPost httpPost = new HttpPost("http://www.copyscape.com/api/");
 
 		List<BasicNameValuePair> nvps = Arrays.<BasicNameValuePair> asList(
@@ -72,6 +72,8 @@ public class HttpService {
 	}
 
 	private ObjectNode doGoogleQuery(SearchQuery searchQuery) throws Exception {
+		DefaultHttpClient httpClient = new DefaultHttpClient();
+
 		HttpGet httpGet  = new HttpGet("https://www.googleapis.com/customsearch/v1?" 
 				+ "&cx=011623744360334870808:plz5huqvq_e" 
 				+ "&key=AIzaSyAP0fH9aEndZbSDFT87g46YY0gjhkQY8Zc" 

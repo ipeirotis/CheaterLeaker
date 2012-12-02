@@ -4,7 +4,7 @@ import javax.inject.Inject;
 
 import org.springframework.stereotype.Component;
 
-import com.ipeirotis.cl.runner.workflow.LookupWorkflowClientExternal;
+import com.ipeirotis.cl.runner.workflow.parent.LookupWorkflowClientExternal;
 
 @Component
 public class LookupService {

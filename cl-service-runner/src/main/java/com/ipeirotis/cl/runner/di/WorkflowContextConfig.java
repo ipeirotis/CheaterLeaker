@@ -8,10 +8,14 @@ import org.springframework.context.support.DefaultLifecycleProcessor;
 import com.amazonaws.services.simpleworkflow.AmazonSimpleWorkflow;
 import com.amazonaws.services.simpleworkflow.flow.spring.SpringActivityWorker;
 import com.amazonaws.services.simpleworkflow.flow.spring.SpringWorkflowWorker;
-import com.ipeirotis.cl.runner.workflow.LookupActivitiesImpl;
-import com.ipeirotis.cl.runner.workflow.LookupWorkflowClientExternal;
-import com.ipeirotis.cl.runner.workflow.LookupWorkflowClientExternalFactoryImpl;
-import com.ipeirotis.cl.runner.workflow.LookupWorkflowImpl;
+import com.ipeirotis.cl.runner.workflow.child.ChildLookupActivitiesImpl;
+import com.ipeirotis.cl.runner.workflow.child.ChildLookupWorkflowClientExternalFactory;
+import com.ipeirotis.cl.runner.workflow.child.ChildLookupWorkflowClientExternalFactoryImpl;
+import com.ipeirotis.cl.runner.workflow.child.ChildLookupWorkflowImpl;
+import com.ipeirotis.cl.runner.workflow.parent.LookupActivitiesImpl;
+import com.ipeirotis.cl.runner.workflow.parent.LookupWorkflowClientExternal;
+import com.ipeirotis.cl.runner.workflow.parent.LookupWorkflowClientExternalFactoryImpl;
+import com.ipeirotis.cl.runner.workflow.parent.LookupWorkflowImpl;
 
 @Configuration
 public class WorkflowContextConfig {
@@ -28,6 +32,12 @@ public class WorkflowContextConfig {
 			AmazonSimpleWorkflow workflowClient) {
 		return new LookupWorkflowClientExternalFactoryImpl(workflowClient,
 				domain).getClient();
+	}
+
+	@Bean
+	public ChildLookupWorkflowClientExternalFactory getChildLookupWorkflowClientFactoryExternal(
+			AmazonSimpleWorkflow workflowClient) {
+		return new ChildLookupWorkflowClientExternalFactoryImpl(workflowClient, domain);
 	}
 
 	@Bean
@@ -55,12 +65,15 @@ public class WorkflowContextConfig {
 				workflowClient, domain, taskList);
 
 		workflowWorker.addWorkflowImplementation(new LookupWorkflowImpl());
+		workflowWorker.addWorkflowImplementation(new ChildLookupWorkflowImpl());
 		workflowWorker.setRegisterDomain(false);
 		
-		//workflowWorker.setDisableTypeRegistrationOnStart(true);
-		
-		//workflowWorker.setDomainRetentionPeriodInDays(30);
-		//workflowWorker.setRegisterDomain(true);
+		workflowWorker.setPollThreadCount(4);
+
+		// workflowWorker.setDisableTypeRegistrationOnStart(true);
+
+		// workflowWorker.setDomainRetentionPeriodInDays(30);
+		// workflowWorker.setRegisterDomain(true);
 
 		return workflowWorker;
 	}
@@ -68,17 +81,21 @@ public class WorkflowContextConfig {
 	@Bean
 	public SpringActivityWorker getActivityWorker(
 			AmazonSimpleWorkflow workflowClient,
-			LookupActivitiesImpl activitiesImpl) throws Exception {
+			ChildLookupActivitiesImpl childActivitiesImpl,
+			LookupActivitiesImpl parentActivitiesImpl) throws Exception {
 		SpringActivityWorker activityWorker = new SpringActivityWorker(
 				workflowClient, domain, taskList);
 
-		activityWorker.addActivitiesImplementation(activitiesImpl);
+		activityWorker.addActivitiesImplementation(childActivitiesImpl);
+		activityWorker.addActivitiesImplementation(parentActivitiesImpl);
 		activityWorker.setRegisterDomain(false);
 		
-		//activityWorker.setDisableTypeRegistrationOnStart(true);
-		
-		//activityWorker.setRegisterDomain(true);
-		//activityWorker.setDomainRetentionPeriodInDays(30);
+		activityWorker.setPollThreadCount(16);
+
+		// activityWorker.setDisableTypeRegistrationOnStart(true);
+
+		// activityWorker.setRegisterDomain(true);
+		// activityWorker.setDomainRetentionPeriodInDays(30);
 
 		return activityWorker;
 	}

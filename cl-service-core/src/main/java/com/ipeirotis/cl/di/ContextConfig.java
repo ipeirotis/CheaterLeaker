@@ -17,6 +17,8 @@ import com.amazonaws.services.s3.AmazonS3;
 import com.amazonaws.services.s3.AmazonS3Client;
 import com.amazonaws.services.simpleworkflow.AmazonSimpleWorkflow;
 import com.amazonaws.services.simpleworkflow.AmazonSimpleWorkflowClient;
+import com.amazonaws.services.sns.AmazonSNS;
+import com.amazonaws.services.sns.AmazonSNSClient;
 
 @Configuration
 @ComponentScan(basePackages = "com.ipeirotis.cl")
@@ -46,6 +48,11 @@ public class ContextConfig {
 	public AmazonElasticMapReduce getElasticMapReduce(
 			AWSCredentials awsCredentials) {
 		return new AmazonElasticMapReduceClient(awsCredentials);
+	}
+	
+	@Bean
+	public AmazonSNS getSNS(AWSCredentials awsCredentials) {
+		return new AmazonSNSClient(awsCredentials);
 	}
 
 	@Bean
