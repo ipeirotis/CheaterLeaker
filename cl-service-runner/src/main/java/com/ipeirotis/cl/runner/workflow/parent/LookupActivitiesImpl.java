@@ -35,7 +35,7 @@ public class LookupActivitiesImpl implements LookupActivities {
 
 	ActivityExecutionContextProvider provider = new ActivityExecutionContextProviderImpl();
 
-	boolean filterFirstRecords = true;
+	boolean filterFirstRecords = false;
 
 	@Override
 	public Collection<Integer> getAllQuestions() {
