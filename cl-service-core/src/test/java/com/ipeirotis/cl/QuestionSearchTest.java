@@ -25,11 +25,6 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.support.AnnotationConfigContextLoader;
 
-import com.aliasi.sentences.MedlineSentenceModel;
-import com.aliasi.sentences.SentenceChunker;
-import com.aliasi.sentences.SentenceModel;
-import com.aliasi.tokenizer.IndoEuropeanTokenizerFactory;
-import com.aliasi.tokenizer.TokenizerFactory;
 import com.ipeirotis.cl.di.ContextConfig;
 import com.ipeirotis.cl.model.IPViolation;
 import com.ipeirotis.cl.model.Question;
@@ -82,11 +77,6 @@ public class QuestionSearchTest {
 				new java.io.FileOutputStream(
 						"src/test/resources/textsToSearch.ser"));
 	}
-
-	static final TokenizerFactory TOKENIZER_FACTORY = IndoEuropeanTokenizerFactory.INSTANCE;
-	static final SentenceModel SENTENCE_MODEL = new MedlineSentenceModel();
-	static final SentenceChunker SENTENCE_CHUNKER = new SentenceChunker(
-			TOKENIZER_FACTORY, SENTENCE_MODEL);
 
 	@Test
 	public void testSearch() throws Exception {
